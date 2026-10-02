@@ -1,0 +1,137 @@
+:root {
+  --color-navy: #1b2a4a;
+  --color-navy-light: #22345c;
+  --color-blue: #2f6fed;
+  --color-blue-bg: #e7f0ff;
+  --color-green: #2f9e5b;
+  --color-green-bg: #e7f8ee;
+  --color-red: #d64545;
+  --color-red-bg: #fdecec;
+  --color-amber: #c98a1c;
+  --color-amber-bg: #fff4e0;
+  --color-bg: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-border: #dde3ea;
+  --color-text: #1b2a4a;
+  --color-text-muted: #5a6577;
+  --color-text-faint: #9aa4b2;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-pill: 999px;
+
+  --shadow-card: 0 1px 2px rgba(27, 42, 74, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+button {
+  font-size: 14px;
+}
+
+::selection {
+  background: var(--color-blue-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-blue);
+  outline-offset: 2px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 10px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: filter 0.15s ease;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: none;
+}
+
+.btn-primary {
+  background: var(--color-blue);
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #f0f3f8;
+  color: var(--color-text);
+}
+
+.btn-danger {
+  background: var(--color-red-bg);
+  color: var(--color-red);
+}
+
+.field-label {
+  display: block;
+  font-size: 12px;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.field-input {
+  width: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  background: #f9fafb;
+  color: var(--color-text);
+}
+
+.field-input:focus {
+  background: #fff;
+  border-color: var(--color-blue);
+}
+
+.field-error {
+  color: var(--color-red);
+  font-size: 12px;
+  margin-top: 8px;
+}
